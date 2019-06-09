@@ -1,0 +1,61 @@
+= Project: {{ projectName }}:{{ projectVersion }}
+Doc Writer <{{ projectAuthors }}>
+2014-09-09
+:revnumber: {{ projectVersion }}
+:example-caption!:
+== Introduction
+
+[%step]
+* This is an example deck.
+* This deck teaches something.
+* We just haven't decided what that is yet.
+
+== Speaker Notes
+Press the `*s*` key to access speaker notes.
+
+[NOTE.speaker]
+--
+You've unlocked the super secret notes area.
+Neat huh?
+--
+
+== Source Code
+
+[source,java]
+.Java code from project
+----
+----
+
+This page was built by the following command:
+
+ $ ./gradlew asciidoctor
+
+== Blank screen
+
+You can press `*b*` or `*.*` to blank your current screen.
+
+Hit it again to bring it back.
+
+== Overview
+
+Press the `*esc*` key to get an overview of your slides.
+
+== Including documents from subdir
+
+----
+new Document()
+----
+== Images
+
+Image here
+
+== Attributes
+
+Press the down arrow key to see the next sub-slide.
+
+=== Attributes Part 1
+.Built-in
+
+
+=== Attributes Part 2
+.Custom
