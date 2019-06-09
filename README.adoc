@@ -1,0 +1,54 @@
+= Asciidoc Document Tools Plugin for JVM projects
+
+This gradle plugin supports generating of project documents from asciidoc format:
+
+* Generate a sane default structure for project documents (readme, license, contributing...)
+* Generate HTML5 specification from asciidoc format (plantuml supported)
+* Generate RevealJS slide dec from asciidoc format
+
+To work with asciidoc, refer to this https://asciidoctor.org/docs/asciidoc-writers-guide/#listing-and-source-code-blocks[writer's guide]
+
+== Build
+
+This plugin is not available in gradle plugin portal. You can build and push to local or private repositories, for example:
+
+[source, sh]
+----
+./gradlew clean build
+./gradle publishToMavenLocal
+----
+
+== Installation
+
+Simply decorate your build.gradle with following:
+
+[source, groovy]
+----
+plugins {
+    id 'com.tna.gradle.docgen-plugin' version '1.0.0-SNAPSHOT'
+}
+
+docGen {
+  documentRoot 'src' //location where you want to store documents for project (presentation, specs...)
+  projectInfo {
+    projectName = 'CoolApiV1'
+    projectVersion = '1.0.0'
+    projectAuthors = 'Author A, Author B'
+    contactEmail = 'author@mail.com'   
+  }
+}
+----
+
+== Usage 
+
+This plugin has three tasks under `documentation` group:
+
+1. `docGenDirTemplate` - generate sensible opinionated document structure with template files
+2. `docGenHtml` - generate formated html5 from .adoc file under `docs/asciidoc/specification`
+3. `docGenSlide` - generate RevealJS presentation from .adoc file under `docs/asciidoc/presentation`
+
+== Contributing
+Pull requests are welcome.
+
+== License
+MIT
