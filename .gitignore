@@ -103,4 +103,6 @@ gradle-app.setting
 .idea/
 gradle-plugins.iml
 
+TODO.adoc
+
 # End of https://www.gitignore.io/api/gradle,intellij
